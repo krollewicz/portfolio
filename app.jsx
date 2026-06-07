@@ -1,9 +1,9 @@
 const { useState, useEffect, useRef } = React;
 
 /* ---------------- logo wordmark ---------------- */
-function Logo({ large }) {
+function Logo() {
   return (
-    <span className={`logo ${large ? "lg" : ""}`} aria-label="KROLLEWICZ">
+    <span className="logo" aria-label="KROLLEWICZ">
       KRO<span className="logo-accent">L</span>LEWICZ
     </span>
   );
@@ -12,127 +12,127 @@ function Logo({ large }) {
 /* ---------------- bilingual copy ---------------- */
 const COPY = {
   pl: {
-    brandSub: "MIŁO\nCIĘ\nWIDZIEĆ",
+    marcin: "MARCIN",
+    status: "DOSTĘPNY 2026 — WARSZAWA",
     nav: ["HOME", "PORTFOLIO", "ABOUT", "SERVICES", "CONTACT"],
-    reel: "REEL — WYBRANE 2024 / 25",
-    loop: "LOOP",
-    playCap1: "showreel.loop.mp4",
-    playCap2: "upuść zapętlone wideo · 1920×1080 · bez dźwięku",
-    status: "DOSTĘPNY DO ZLECEŃ — 2025",
-    boxHead: ["Obraz, który", "się <em>nie</em> zatrzymuje."],
-    boxLede: "<b>KROLLEWICZ</b> — projektant wizualny łączący fotografię, ruch i obrazy generowane przez AI.",
-    headline: ["Obraz, który", "się <em>nie</em>", "zatrzymuje."],
-    lede: "Jestem KROLLEWICZ — projektant wizualny łączący fotografię, ruch i obrazy generowane przez AI. Buduję spójne systemy wizualne dla marek, które chcą wyróżnić się ciszą, a nie hałasem.",
-    indexH: "WYBRANE PRACE / KATEGORIE",
-    index: [
-      { name: "Fotografia", count: "24 ↗" },
-      { name: "Wideo / Loop", count: "12 ↗" },
-      { name: "Grafiki AI", count: "31 ↗" },
-      { name: "Reklamy / Kampanie", count: "09 ↗" },
-    ],
-    cta: "Zobacz pełne portfolio",
-    book: "Umów konsultację",
-    aboutLabel: "O MNIE",
-    navKicker: "— MENU —",
-    pg: {
-      portfolio: "WYBRANE PRACE",
-      aboutTitle: "O MNIE",
-      aboutBio: "Marcin Królewicz — projektant wizualny łączący fotografię, ruch i obrazy generowane przez AI. Tworzę spójne systemy wizualne dla marek, które chcą wyróżnić się ciszą, nie hałasem.",
-      servicesTitle: "USŁUGI",
-      contactTitle: "ZACZNIJMY",
-      contactLead: "Zostaw maila i opisz zapytanie graficzne — odezwę się w ciągu 24h.",
-      emailPh: "twój@email.com",
+    role: "ART DIRECTOR / VISUAL DESIGNER",
+    based: "WARSZAWA, PL",
+    pf: {
+      kicker: "WYBRANE PRACE",
+      title: "PORTFOLIO",
+    },
+    about: {
+      kicker: "O MNIE",
+      title: "ABOUT",
+      bio: "Jestem <b>Marcin Królewicz</b> — projektant wizualny łączący fotografię, ruch i obrazy generowane przez AI. Buduję spójne systemy wizualne dla marek, które chcą wyróżnić się ciszą, nie hałasem.",
+      stats: [
+        ["DOŚWIADCZENIE", "od 2018"],
+        ["KLIENCI", "40+ marek"],
+        ["SPECJALIZACJA", "Brand · Motion\nAI · Kampanie"],
+        ["BAZA", "Warszawa\n52.23° N"],
+      ],
+    },
+    svc: {
+      kicker: "CO ROBIĘ",
+      title: "SERVICES",
+      items: [
+        ["AI", "Obrazy i wideo generowane sztuczną inteligencją"],
+        ["PHOTO", "Fotografia produktowa, modowa, portretowa"],
+        ["VIDEO", "Reel, kampanie, treści społecznościowe"],
+        ["CREATIVE IDEA", "Koncepcja i kierunek kreatywny"],
+        ["GRAPHIC DESIGN", "Identyfikacja, layout, typografia"],
+        ["COMMERCIALS", "Reklamy i filmy komercyjne"],
+        ["DIGITAL", "Strony, social, treści cyfrowe"],
+      ],
+    },
+    contact: {
+      kicker: "ZACZNIJMY",
+      title: "CONTACT",
+      lead: "Zostaw maila i opisz swoje zapytanie graficzne — odezwę się w ciągu 24h.",
+      emailL: "TWÓJ EMAIL",
+      emailPh: "twoj@email.com",
+      msgL: "ZAPYTANIE",
       msgPh: "Opisz swój projekt graficzny…",
       send: "Wyślij zapytanie",
-      sent: "Dziękuję! Odezwę się wkrótce.",
-      services: [
-        { n: "AI", d: "Obrazy i wideo generowane sztuczną inteligencją" },
-        { n: "PHOTO", d: "Fotografia produktowa, modowa, portretowa" },
-        { n: "VIDEO", d: "Reel, kampanie, treści społecznościowe" },
-        { n: "CREATIVE IDEA", d: "Koncepcja i kierunek kreatywny" },
-        { n: "GRAPHIC DESIGN", d: "Identyfikacja, layout, typografia" },
-        { n: "COMMERCIALS", d: "Reklamy i filmy komercyjne" },
-        { n: "DIGITAL", d: "Strony, social, treści cyfrowe" },
-      ],
+      sent: "DZIĘKUJĘ — ODEZWĘ SIĘ WKRÓTCE.",
+      directK: "BEZPOŚREDNIO",
+      igK: "SOCIAL",
     },
-    bento: {
-      role: ["ROLA", "Art Director\n& Visual Designer"],
-      based: ["LOKALIZACJA", "Warszawa, PL\n52.23° N"],
-      clients: ["KLIENCI", "40+"],
-      since: ["OD", "2018"],
-      focus: ["SPECJALIZACJA", "Brand · Motion · AI Imagery · Kampanie"],
+    foot: {
+      menu: "MENU",
+      contactH: "KONTAKT",
+      socialH: "SOCIAL",
+      rights: "© 2026 MARCIN KRÓLEWICZ — WSZELKIE PRAWA ZASTRZEŻONE",
+      made: "PORTFOLIO GRAFICZNE / WARSZAWA",
     },
-    miniH: "MENU",
-    foot: "DOSTĘPNY 2025",
   },
   en: {
-    brandSub: "NICE\nTO\nSEE\nYOU",
+    marcin: "MARCIN",
+    status: "AVAILABLE 2026 — WARSAW",
     nav: ["HOME", "PORTFOLIO", "ABOUT", "SERVICES", "CONTACT"],
-    reel: "REEL — SELECTED 2024 / 25",
-    loop: "LOOP",
-    playCap1: "showreel.loop.mp4",
-    playCap2: "drop a looping video · 1920×1080 · muted",
-    status: "AVAILABLE FOR WORK — 2025",
-    boxHead: ["The image that", "never <em>stops</em> moving."],
-    boxLede: "<b>KROLLEWICZ</b> — visual designer merging photography, motion and AI-generated imagery.",
-    headline: ["The image that", "never <em>stops</em>", "moving."],
-    lede: "I'm KROLLEWICZ — a visual designer merging photography, motion and AI-generated imagery. I build coherent visual systems for brands that want to stand out through silence, not noise.",
-    indexH: "SELECTED WORK / CATEGORIES",
-    index: [
-      { name: "Photography", count: "24 ↗" },
-      { name: "Video / Loop", count: "12 ↗" },
-      { name: "AI Graphics", count: "31 ↗" },
-      { name: "Ads / Campaigns", count: "09 ↗" },
-    ],
-    cta: "View full portfolio",
-    book: "Book a consultation",
-    aboutLabel: "ABOUT",
-    navKicker: "— MENU —",
-    pg: {
-      portfolio: "SELECTED WORK",
-      aboutTitle: "ABOUT",
-      aboutBio: "Marcin Królewicz — a visual designer merging photography, motion and AI-generated imagery. I build coherent visual systems for brands that want to stand out through silence, not noise.",
-      servicesTitle: "SERVICES",
-      contactTitle: "LET’S START",
-      contactLead: "Leave your email and describe your graphic inquiry — I’ll reply within 24h.",
-      emailPh: "your@email.com",
-      msgPh: "Describe your graphic project…",
-      send: "Send inquiry",
-      sent: "Thank you! I’ll be in touch soon.",
-      services: [
-        { n: "AI", d: "AI-generated imagery and video" },
-        { n: "PHOTO", d: "Product, fashion, portrait photography" },
-        { n: "VIDEO", d: "Reels, campaigns, social content" },
-        { n: "CREATIVE IDEA", d: "Concept and creative direction" },
-        { n: "GRAPHIC DESIGN", d: "Identity, layout, typography" },
-        { n: "COMMERCIALS", d: "Ads and commercial films" },
-        { n: "DIGITAL", d: "Websites, social, digital content" },
+    role: "ART DIRECTOR / VISUAL DESIGNER",
+    based: "WARSAW, PL",
+    pf: {
+      kicker: "SELECTED WORK",
+      title: "PORTFOLIO",
+    },
+    about: {
+      kicker: "ABOUT",
+      title: "ABOUT",
+      bio: "I'm <b>Marcin Królewicz</b> — a visual designer merging photography, motion and AI-generated imagery. I build coherent visual systems for brands that want to stand out through silence, not noise.",
+      stats: [
+        ["EXPERIENCE", "since 2018"],
+        ["CLIENTS", "40+ brands"],
+        ["FOCUS", "Brand · Motion\nAI · Campaigns"],
+        ["BASED IN", "Warsaw\n52.23° N"],
       ],
     },
-    bento: {
-      role: ["ROLE", "Art Director\n& Visual Designer"],
-      based: ["BASED IN", "Warsaw, PL\n52.23° N"],
-      clients: ["CLIENTS", "40+"],
-      since: ["SINCE", "2018"],
-      focus: ["FOCUS", "Brand · Motion · AI Imagery · Campaigns"],
+    svc: {
+      kicker: "WHAT I DO",
+      title: "SERVICES",
+      items: [
+        ["AI", "AI-generated imagery and video"],
+        ["PHOTO", "Product, fashion, portrait photography"],
+        ["VIDEO", "Reels, campaigns, social content"],
+        ["CREATIVE IDEA", "Concept and creative direction"],
+        ["GRAPHIC DESIGN", "Identity, layout, typography"],
+        ["COMMERCIALS", "Ads and commercial films"],
+        ["DIGITAL", "Websites, social, digital content"],
+      ],
     },
-    miniH: "MENU",
-    foot: "AVAILABLE 2025",
+    contact: {
+      kicker: "LET'S START",
+      title: "CONTACT",
+      lead: "Leave your email and describe your graphic inquiry — I'll reply within 24h.",
+      emailL: "YOUR EMAIL",
+      emailPh: "your@email.com",
+      msgL: "INQUIRY",
+      msgPh: "Describe your graphic project…",
+      send: "Send inquiry",
+      sent: "THANK YOU — I'LL BE IN TOUCH SOON.",
+      directK: "DIRECT",
+      igK: "SOCIAL",
+    },
+    foot: {
+      menu: "MENU",
+      contactH: "CONTACT",
+      socialH: "SOCIAL",
+      rights: "© 2026 MARCIN KRÓLEWICZ — ALL RIGHTS RESERVED",
+      made: "GRAPHIC PORTFOLIO / WARSAW",
+    },
   },
 };
 
 const ACCENTS = {
-  mono: { v: "#141413", ink: "#fafafa", label: "MONO" },
-  lime: { v: "#c2e600", ink: "#141413", label: "LIME" },
-  red:  { v: "#ff4d2e", ink: "#fafafa", label: "RED" },
-  blue: { v: "#2f6bff", ink: "#fafafa", label: "BLUE" },
+  mono: { v: "#141413", ink: "#fafafa" },
+  lime: { v: "#c2e600", ink: "#141413" },
+  red:  { v: "#ff4d2e", ink: "#fafafa" },
+  blue: { v: "#2f6bff", ink: "#fafafa" },
 };
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "accent": "mono",
-  "rightLayout": "stats",
-  "navStyle": "plain",
-  "gridTexture": true
+  "cursorWords": true
 }/*EDITMODE-END*/;
 
 /* ---------------- live timecode ---------------- */
@@ -142,10 +142,7 @@ function useTimecode() {
     let f = 0;
     const id = setInterval(() => {
       f = (f + 1) % (24 * 60 * 60 * 25);
-      const fr = f % 25;
-      const s = Math.floor(f / 25) % 60;
-      const m = Math.floor(f / (25 * 60)) % 60;
-      const h = Math.floor(f / (25 * 3600)) % 24;
+      const fr = f % 25, s = Math.floor(f / 25) % 60, m = Math.floor(f / (25 * 60)) % 60, h = Math.floor(f / (25 * 3600)) % 24;
       const p = (n) => String(n).padStart(2, "0");
       setTc(`${p(h)}:${p(m)}:${p(s)}:${p(fr)}`);
     }, 40);
@@ -154,61 +151,7 @@ function useTimecode() {
   return tc;
 }
 
-function useClock() {
-  const [now, setNow] = useState("");
-  useEffect(() => {
-    const tick = () => {
-      const d = new Date();
-      const p = (n) => String(n).padStart(2, "0");
-      setNow(`${p(d.getHours())}:${p(d.getMinutes())}:${p(d.getSeconds())}`);
-    };
-    tick();
-    const id = setInterval(tick, 1000);
-    return () => clearInterval(id);
-  }, []);
-  return now;
-}
-
-/* ---------------- NAV (bottom dock) ---------------- */
-function Nav({ t, lang, setLang, active, setActive }) {
-  return (
-    <nav className="nav-center">
-      <div className="nav-stack">
-        {t.nav.map((label, i) => (
-          <button
-            key={label}
-            className={`nav-v-item reveal ${active === i ? "active" : ""}`}
-            style={{ animationDelay: `${0.26 + i * 0.05}s` }}
-            onClick={() => setActive(i)}
-          >
-            {label}
-          </button>
-        ))}
-      </div>
-      <CornerUtility lang={lang} setLang={setLang} />
-    </nav>
-  );
-}
-
-function AboutSquare({ t }) {
-  const b = t.bento;
-  return (
-    <div className="about-square reveal" style={{ animationDelay: "0.34s" }}>
-      <span className="sq-tick tl"></span>
-      <span className="sq-tick br"></span>
-      <span className="as-label mono">{t.aboutLabel}</span>
-      <div className="as-body">
-        <div className="as-name">Marcin<br />Królewicz</div>
-        <div className="as-meta">
-          <div className="as-row"><span className="k mono">{b.role[0]}</span><span className="v">Art Director / Visual Designer</span></div>
-          <div className="as-row"><span className="k mono">{b.based[0]}</span><span className="v">Warszawa, PL</span></div>
-        </div>
-      </div>
-      <button className="as-btn">{t.book} <span className="a">→</span></button>
-    </div>
-  );
-}
-
+/* ---------------- cursor word labels ---------------- */
 function CursorWords() {
   const [labels, setLabels] = useState([]);
   const idRef = useRef(0);
@@ -217,17 +160,14 @@ function CursorWords() {
     const words = ["oj", "oh", "aj", "hi", "ej", "hej", "o!", "ha", "no!"];
     const onMove = (e) => {
       const now = performance.now();
-      const dx = e.clientX - lastRef.current.x;
-      const dy = e.clientY - lastRef.current.y;
+      const dx = e.clientX - lastRef.current.x, dy = e.clientY - lastRef.current.y;
       const dist = Math.hypot(dx, dy);
-      if (now - lastRef.current.t < 240) return;
-      if (dist < 45) return;
+      if (now - lastRef.current.t < 240 || dist < 45) return;
       lastRef.current = { x: e.clientX, y: e.clientY, t: now };
       if (Math.random() > 0.4) return;
       const id = ++idRef.current;
       const word = words[Math.floor(Math.random() * words.length)];
-      const jx = (Math.random() - 0.5) * 34;
-      const jy = 16 + Math.random() * 16;
+      const jx = (Math.random() - 0.5) * 34, jy = 16 + Math.random() * 16;
       setLabels((ls) => [...ls, { id, x: e.clientX - dx * 1.4 + jx, y: e.clientY - dy * 1.4 + jy, word }]);
       setTimeout(() => setLabels((ls) => ls.filter((l) => l.id !== id)), 950);
     };
@@ -236,182 +176,191 @@ function CursorWords() {
   }, []);
   return (
     <div className="cursor-words" aria-hidden="true">
-      {labels.map((l) => (
-        <span key={l.id} className="cw" style={{ left: l.x, top: l.y }}>{l.word}</span>
-      ))}
+      {labels.map((l) => <span key={l.id} className="cw" style={{ left: l.x, top: l.y }}>{l.word}</span>)}
     </div>
   );
 }
 
-/* ---------------- STAGE / VIDEO ---------------- */
-function Stage({ t }) {
-  const tc = useTimecode();
+const MailIcon = () => (
+  <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="5" width="18" height="14"></rect><path d="M3 6.5l9 6.5 9-6.5"></path></svg>
+);
+const IgIcon = () => (
+  <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.3"></circle><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"></circle></svg>
+);
+const LinkedInIcon = () => (
+  <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="4"></rect><line x1="7.4" y1="10.6" x2="7.4" y2="16.6"></line><circle cx="7.4" cy="7.7" r="0.95" fill="currentColor" stroke="none"></circle><path d="M11 16.6 v-3.2 a2.3 2.3 0 0 1 4.6 0 V16.6"></path><line x1="11" y1="10.8" x2="11" y2="16.6"></line></svg>
+);
+
+/* ---------------- HEADER (top utility: brand + lang/social, right cluster) ---------------- */
+function Header({ t, lang, setLang }) {
   return (
-    <section className="stage">
-      <div className="video-full fade-in" style={{ animationDelay: "0.2s" }}>
-        <video
-          className="video-el"
-          src="assets/showreel.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-        ></video>
-        <span className="ov ov-tc mono">{tc}</span>
+    <header className="header">
+      <div className="header-left">
+        <div className="hsocial">
+          <a href="mailto:hello@krollewicz.studio" aria-label="Email"><MailIcon /></a>
+          <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram"><IgIcon /></a>
+          <a href="https://linkedin.com" target="_blank" rel="noreferrer" aria-label="LinkedIn"><LinkedInIcon /></a>
+        </div>
+      </div>
+      <div className="header-right">
+        <div className="hlang">
+          <button className={lang === "pl" ? "on" : ""} onClick={() => setLang("pl")}>PL</button>
+          <span className="sep"></span>
+          <button className={lang === "en" ? "on" : ""} onClick={() => setLang("en")}>EN</button>
+        </div>
+      </div>
+    </header>
+  );
+}
+
+/* ---------------- FLOATING NAV (bottom on home -> docks at top as portfolio enters) ---------------- */
+function FloatNav({ t, active, go, docked }) {
+  return (
+    <nav className={`floatnav ${docked ? "docked" : ""}`}>
+      {t.nav.map((label, i) => (
+        <button key={label} className={`hnav-item ${active === i ? "active" : ""}`} onClick={() => go(i)}>{label}</button>
+      ))}
+    </nav>
+  );
+}
+
+/* ---------------- HOME (pinned reveal: plate retracts, video shows) ---------------- */
+function Hero({ t, innerRef }) {
+  return (
+    <section className="home" ref={innerRef}>
+      <div className="home-video-band">
+        <video className="home-video fade-in" src="assets/showreel.mp4" autoPlay loop muted playsInline></video>
+        <div className="home-video-fx"></div>
+        <div className="home-video-grain"></div>
+      </div>
+      <div className="home-plate"></div>
+      <div className="home-scroll">
+        <span>SCROLL</span>
+        <span className="line"></span>
       </div>
     </section>
   );
 }
 
-/* ---------------- Swiss grid + Future UI overlays ---------------- */
-function GridOverlay() {
-  return <div className="grid-overlay" aria-hidden="true"></div>;
-}
+/* ---------------- PORTFOLIO lives in portfolio.jsx (window.Portfolio) ---------------- */
 
-function HUD() {
+/* ---------------- ABOUT ---------------- */
+function About({ t, innerRef }) {
   return (
-    <div className="hud" aria-hidden="true">
-      <span className="hud-corner tl"></span>
-      <span className="hud-corner tr"></span>
-      <span className="hud-corner bl"></span>
-      <span className="hud-corner br"></span>
-      <span className="cross" style={{ left: "33.333%", top: "30%" }}></span>
-      <span className="cross" style={{ left: "66.666%", top: "70%" }}></span>
-    </div>
-  );
-}
-
-/* ---------------- cursor effects (reticle + parallax + glow) ---------------- */
-function CursorFX() {
-  const ref = useRef(null);
-  const [p, setP] = useState({ x: -200, y: -200, on: false, w: 1, h: 1 });
-  useEffect(() => {
-    const el = ref.current;
-    const main = el && el.parentElement;
-    if (!main) return;
-    let raf = 0, last = null;
-    const apply = () => {
-      raf = 0;
-      if (!last) return;
-      const r = main.getBoundingClientRect();
-      const x = last.clientX - r.left, y = last.clientY - r.top;
-      const on = x >= 0 && y >= 0 && x <= r.width && y <= r.height;
-      main.style.setProperty("--px", ((x / r.width) - 0.5).toFixed(3));
-      main.style.setProperty("--py", ((y / r.height) - 0.5).toFixed(3));
-      setP({ x, y, on, w: r.width, h: r.height });
-    };
-    const move = (e) => { last = e; if (!raf) raf = requestAnimationFrame(apply); };
-    const leave = () => setP((s) => ({ ...s, on: false }));
-    window.addEventListener("mousemove", move);
-    main.addEventListener("mouseleave", leave);
-    return () => {
-      window.removeEventListener("mousemove", move);
-      main.removeEventListener("mouseleave", leave);
-      cancelAnimationFrame(raf);
-    };
-  }, []);
-  const cx = p.w ? Math.round((p.x / p.w) * 1000) : 0;
-  const cy = p.h ? Math.round((p.y / p.h) * 1000) : 0;
-  const pad = (n) => String(Math.max(0, Math.min(1000, n))).padStart(4, "0");
-  return (
-    <div className={`cursorfx ${p.on ? "on" : ""}`} ref={ref} aria-hidden="true">
-      <span className="cfx-glow" style={{ left: p.x, top: p.y }}></span>
-      <span className="cfx-v" style={{ left: p.x }}></span>
-      <span className="cfx-h" style={{ top: p.y }}></span>
-      <span className="cfx-dot" style={{ left: p.x, top: p.y }}></span>
-      <span className="cfx-read" style={{ left: p.x, top: p.y }}>X{pad(cx)} · Y{pad(cy)}</span>
-    </div>
-  );
-}
-
-function CornerUtility({ lang, setLang }) {
-  return (
-    <div className="corner-utility">
-      <div className="nav-social">
-        <a href="mailto:hello@krollewicz.studio" aria-label="Email">
-          <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="5" width="18" height="14"></rect><path d="M3 6.5l9 6.5 9-6.5"></path></svg>
-        </a>
-        <a href="https://instagram.com" target="_blank" rel="noreferrer" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4.3"></circle><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"></circle></svg>
-        </a>
+    <section className="block" id="about" ref={innerRef}>
+      <div className="about-wrap">
+        <div className="about-photo reveal">
+          <image-slot id="about-portrait" shape="rect" placeholder="Upuść zdjęcie portretowe"></image-slot>
+        </div>
+        <div className="about-copy reveal" style={{ transitionDelay: "0.1s" }}>
+          <p className="about-bio" dangerouslySetInnerHTML={{ __html: t.about.bio }}></p>
+          <div className="about-stats">
+            {t.about.stats.map(([k, v], i) => (
+              <div className="cell" key={i}>
+                <span className="k">{k}</span>
+                <span className="v">{v}</span>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-      <div className="lang-toggle">
-        <button className={`lang-btn ${lang === "pl" ? "on" : ""}`} onClick={() => setLang("pl")}>PL</button>
-        <span className="lang-sep"></span>
-        <button className={`lang-btn ${lang === "en" ? "on" : ""}`} onClick={() => setLang("en")}>EN</button>
-      </div>
-    </div>
+    </section>
   );
 }
 
-/* ---------------- SQUARE BOX CONTENT (3 variants) ---------------- */
-function SquareEditorial({ t }) {
+/* ---------------- SERVICES ---------------- */
+function Services({ t, innerRef }) {
   return (
-    <>
-      <h2 className="sq-head reveal" style={{ animationDelay: "0.2s" }}>
-        {t.boxHead.map((line, i) => (
-          <span key={i} style={{ display: "block" }} dangerouslySetInnerHTML={{ __html: line }}></span>
+    <section className="block" id="services" ref={innerRef}>
+      <div className="svc-list">
+        {t.svc.items.map(([name, desc], i) => (
+          <div className="svc-row reveal" key={name} style={{ transitionDelay: `${i * 0.04}s` }}>
+            <span className="svc-no">{String(i + 1).padStart(2, "0")}</span>
+            <span className="svc-name">{name}</span>
+            <span className="svc-desc">{desc}</span>
+          </div>
         ))}
-      </h2>
-      <div className="sq-foot reveal" style={{ animationDelay: "0.28s" }}>
-        <p className="sq-lede" dangerouslySetInnerHTML={{ __html: t.boxLede }}></p>
-        <button className="sq-link">{t.cta} <span className="a">→</span></button>
       </div>
-    </>
+    </section>
   );
 }
 
-function SquareStats({ t }) {
-  const b = t.bento;
+/* ---------------- CONTACT ---------------- */
+function Contact({ t, innerRef }) {
+  const [email, setEmail] = useState("");
+  const [msg, setMsg] = useState("");
+  const [sent, setSent] = useState(false);
+  const submit = (e) => {
+    e.preventDefault();
+    const subject = encodeURIComponent("Zapytanie graficzne — KROLLEWICZ");
+    const body = encodeURIComponent(`${msg}\n\n— ${email}`);
+    window.location.href = `mailto:hello@krollewicz.studio?subject=${subject}&body=${body}`;
+    setSent(true);
+  };
   return (
-    <>
-      <div className="sq-info reveal" style={{ animationDelay: "0.2s" }}>
-        <div className="sq-row">
-          <span className="k mono">{b.role[0]}</span>
-          <span className="v" style={{ whiteSpace: "pre-line" }}>{b.role[1]}</span>
+    <section className="block" id="contact" ref={innerRef}>
+      <div className="contact-wrap">
+        <div className="reveal">
+          <p className="contact-lead">{t.contact.lead}</p>
+          <div className="contact-meta">
+            <a href="mailto:hello@krollewicz.studio"><span className="k">{t.contact.directK}</span> hello@krollewicz.studio</a>
+            <a href="https://instagram.com" target="_blank" rel="noreferrer"><span className="k">{t.contact.igK}</span> @krollewicz</a>
+          </div>
         </div>
-        <div className="sq-row">
-          <span className="k mono">{b.based[0]}</span>
-          <span className="v" style={{ whiteSpace: "pre-line" }}>{b.based[1]}</span>
+        <form className="form reveal" style={{ transitionDelay: "0.1s" }} onSubmit={submit}>
+          <div className="field">
+            <label>{t.contact.emailL}</label>
+            <input type="email" required placeholder={t.contact.emailPh} value={email} onChange={(e) => setEmail(e.target.value)} />
+          </div>
+          <div className="field">
+            <label>{t.contact.msgL}</label>
+            <textarea rows="4" required placeholder={t.contact.msgPh} value={msg} onChange={(e) => setMsg(e.target.value)}></textarea>
+          </div>
+          <button className="form-send" type="submit">{t.contact.send} <span className="a">→</span></button>
+          {sent && <div className="form-sent">{t.contact.sent}</div>}
+        </form>
+      </div>
+    </section>
+  );
+}
+
+/* ---------------- FOOTER ---------------- */
+function Footer({ t, go }) {
+  return (
+    <footer className="footer">
+      <div className="footer-top">
+        <div className="footer-col">
+          <h4>{t.foot.menu}</h4>
+          {t.nav.map((label, i) => <a key={label} href="#" onClick={(e) => { e.preventDefault(); go(i); }}>{label}</a>)}
+        </div>
+        <div className="footer-col">
+          <h4>{t.foot.contactH}</h4>
+          <a href="mailto:hello@krollewicz.studio">hello@krollewicz.studio</a>
+          <p>{t.based}</p>
+        </div>
+        <div className="footer-col">
+          <h4>{t.foot.socialH}</h4>
+          <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram ↗</a>
+          <a href="https://behance.net" target="_blank" rel="noreferrer">Behance ↗</a>
         </div>
       </div>
-      <div className="sq-actions reveal" style={{ animationDelay: "0.3s" }}>
-        <button className="sq-link">{t.cta} <span className="a">→</span></button>
-        <button className="sq-btn">{t.book} <span className="a">→</span></button>
+      <div className="footer-wordmark">kro<span className="logo-accent">l</span>lewicz</div>
+      <div className="footer-base">
+        <span>{t.foot.rights}</span>
+        <span>{t.foot.made}</span>
       </div>
-    </>
+    </footer>
   );
 }
 
-function SquareMinimal({ t }) {
+/* ---------------- toast (new-project detection) ---------------- */
+function Toast({ msg }) {
+  if (!msg) return null;
   return (
-    <>
-      <div className="reveal" style={{ animationDelay: "0.2s" }}>
-        <Logo />
-      </div>
-      <div className="sq-foot reveal" style={{ animationDelay: "0.28s" }}>
-        <p className="sq-lede" dangerouslySetInnerHTML={{ __html: t.boxLede }}></p>
-        <button className="sq-link">{t.cta} <span className="a">→</span></button>
-      </div>
-    </>
-  );
-}
-
-function SquareBox({ t, layout }) {
-  return (
-    <div className="square reveal" style={{ animationDelay: "0.12s" }}>
-      <span className="sq-tick tl"></span>
-      <span className="sq-tick tr"></span>
-      <span className="sq-tick bl"></span>
-      <span className="sq-tick br"></span>
-      <div className="sq-hud">
-        <span className="live">●</span>{t.status}
-      </div>
-      <div className="sq-content">
-        {layout === "editorial" && <SquareEditorial t={t} />}
-        {layout === "stats" && <SquareStats t={t} />}
-        {layout === "minimal" && <SquareMinimal t={t} />}
-      </div>
+    <div className="toast" key={msg.id}>
+      <span className="toast-dot"></span>
+      <span className="toast-k mono">{msg.k}</span>
+      <span className="toast-v">{msg.v}</span>
     </div>
   );
 }
@@ -421,60 +370,142 @@ function App() {
   const [tw, setTweak] = useTweaks(TWEAK_DEFAULTS);
   const [lang, setLang] = useState("pl");
   const [active, setActive] = useState(0);
+  const [docked, setDocked] = useState(false);
   const t = COPY[lang];
-
   const acc = ACCENTS[tw.accent] || ACCENTS.mono;
+
+  const { projects, newIds, sync, simulate } = usePortfolioSync();
+  const [lb, setLb] = useState(null);
+  const [lbIndex, setLbIndex] = useState(0);
+  const [toast, setToast] = useState(null);
+  const seenNew = useRef(new Set());
+
+  const refs = [useRef(null), useRef(null), useRef(null), useRef(null), useRef(null)];
+
+  const openLb = (project, idx) => { setLb(project); setLbIndex(idx || 0); };
+
   useEffect(() => {
     document.documentElement.style.setProperty("--accent", acc.v);
     document.documentElement.style.setProperty("--accent-ink", acc.ink);
     document.documentElement.lang = lang;
   }, [acc, lang]);
 
+  /* surface a toast the first time a project id is flagged new */
   useEffect(() => {
-    const shell = document.querySelector(".shell");
-    if (!shell) return;
-    const COLORS = ["#ffffff", "#15c7f5", "#c2e600", "#ff4d2e", "#2f6bff", "#ff3da1", "#ffd23d", "#a78bfa", "#36e0a0"];
-    let raf = 0, last = null, lastColorT = 0;
-    const apply = () => {
-      raf = 0;
-      if (!last) return;
-      const px = (last.clientX / window.innerWidth - 0.5);
-      const py = (last.clientY / window.innerHeight - 0.5);
-      shell.style.setProperty("--px", px.toFixed(3));
-      shell.style.setProperty("--py", py.toFixed(3));
-    };
-    const move = (e) => {
-      last = e;
-      if (!raf) raf = requestAnimationFrame(apply);
-      const now = performance.now();
-      if (now - lastColorT > 70) {
-        lastColorT = now;
-        const c = COLORS[Math.floor(Math.random() * COLORS.length)];
-        const logo = document.querySelector(".logo-top .logo");
-        if (logo) {
-          logo.style.color = c;
-          const acc = logo.querySelector(".logo-accent");
-          if (acc) acc.style.color = c;
+    const fresh = newIds.find((id) => !seenNew.current.has(id));
+    if (!fresh) return;
+    seenNew.current.add(fresh);
+    const p = projects.find((x) => x.id === fresh);
+    const id = Date.now();
+    setToast({ id, k: lang === "pl" ? "WYKRYTO NOWY PROJEKT" : "NEW PROJECT DETECTED", v: p ? p.title : fresh });
+    const tm = setTimeout(() => setToast((cur) => (cur && cur.id === id ? null : cur)), 5200);
+    return () => clearTimeout(tm);
+  }, [newIds, projects, lang]);
+
+  /* active-section highlight + scroll-driven fallback for older engines */
+  useEffect(() => {
+    const supportsST = window.CSS && CSS.supports && CSS.supports("animation-timeline: scroll()");
+    let raf = 0;
+    const onScroll = () => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = 0;
+        const vh = window.innerHeight;
+        const probe = vh * 0.42;
+        let cur = 0;
+        refs.forEach((r, i) => { if (r.current && r.current.getBoundingClientRect().top <= probe) cur = i; });
+        setActive(cur);
+        // nav snap threshold: dock once the portfolio is ~halfway into view
+        const pf0 = refs[1].current;
+        if (pf0) {
+          const top0 = pf0.getBoundingClientRect().top;
+          const dprog = (vh - top0) / (vh * 0.85);
+          setDocked(dprog > 0.5);
         }
+        // parallax: footer wordmark drifts right over the final stretch of the page
+        const fw = document.querySelector(".footer-wordmark");
+        const maxS = document.documentElement.scrollHeight - window.innerHeight;
+        if (fw && maxS > 0) {
+          const sp = window.scrollY / maxS;
+          const fp = Math.max(0, Math.min(1, (sp - 0.74) / 0.26));
+          fw.style.transform = `translateX(${(-9 + fp * 26).toFixed(2)}%)`;
+        }
+        // Always drive --dock / --hp from JS as a robust fallback. When the CSS
+        // scroll/view timeline is active it overrides these inline values (the
+        // animation wins the cascade); when the timeline can't resolve, JS keeps
+        // the logo morph + plate reveal alive.
+        {
+          const y = window.scrollY;
+          const pf = refs[1].current;
+          let d = 0;
+          if (pf) { const top = pf.getBoundingClientRect().top; d = Math.max(0, Math.min(1, (vh - top) / (vh * 0.85))); }
+          // plate retraction is synced to the logo morph so the wordmark rides the
+          // light plate down and settles onto the pinned top bar in the final phase
+          document.documentElement.style.setProperty("--hp", d.toFixed(3));
+          document.documentElement.style.setProperty("--dock", d.toFixed(3));
+        }
+      });
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => { window.removeEventListener("scroll", onScroll); window.removeEventListener("resize", onScroll); };
+  }, []);
+
+  /* reveal on scroll (non scroll-timeline elements) */
+  useEffect(() => {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); } });
+    }, { threshold: 0.14 });
+    document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+    return () => io.disconnect();
+  }, [lang, projects]);
+
+  /* parallax on the home video */
+  useEffect(() => {
+    let raf = 0, last = null;
+    const apply = () => {
+      raf = 0; if (!last) return;
+      const hero = refs[0].current;
+      if (hero) {
+        const r = hero.getBoundingClientRect();
+        hero.style.setProperty("--px", ((last.clientX / window.innerWidth) - 0.5).toFixed(3));
+        hero.style.setProperty("--py", (((last.clientY - r.top) / r.height) - 0.5).toFixed(3));
       }
     };
+    const move = (e) => { last = e; if (!raf) raf = requestAnimationFrame(apply); };
     window.addEventListener("mousemove", move);
     return () => { window.removeEventListener("mousemove", move); cancelAnimationFrame(raf); };
   }, []);
 
+  const go = (i) => {
+    const el = refs[i].current;
+    if (!el) return;
+    const y = i === 0 ? 0 : window.scrollY + el.getBoundingClientRect().top - 66;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
+
   return (
-    <div className="shell">
-      <Stage t={t} />
-      {tw.gridTexture && <GridOverlay />}
-      <div className="frame" aria-hidden="true"></div>
-      <div className="greeting">
-        <span className="greet-text">{t.brandSub}</span>
-        <svg className="crown" viewBox="0 0 100 56" aria-hidden="true"><polygon points="3,54 7,6 37,30 54,4 66,28 95,7 98,54" fill="#ffffff"></polygon></svg>
+    <React.Fragment>
+      <Header t={t} lang={lang} setLang={setLang} />
+      <div className="home-mark" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+        <span className="home-name">kro<span style={{ color: "var(--accent)" }}>l</span>lewicz</span>
+        <span className="home-sub">marcin<span className="dot">.</span></span>
       </div>
-      <div className="logo-top fade-in" style={{ animationDelay: "0.1s" }}><Logo /></div>
-      <Nav t={t} lang={lang} setLang={setLang} active={active} setActive={setActive} />
-      <AboutSquare t={t} />
-      <CursorWords />
+      <FloatNav t={t} active={active} go={go} docked={docked} />
+      <Hero t={t} innerRef={refs[0]} />
+      <div className="reveal-spacer"></div>
+      <div className="curtain">
+        <Portfolio t={t} lang={lang} innerRef={refs[1]} sync={sync} projects={projects} newIds={newIds} onOpen={openLb} onContact={() => go(4)} />
+        <About t={t} innerRef={refs[2]} />
+        <Services t={t} innerRef={refs[3]} />
+        <Contact t={t} innerRef={refs[4]} />
+        <Footer t={t} go={go} />
+      </div>
+      <div className="frame-border"></div>
+      {tw.cursorWords && <CursorWords />}
+      <Toast msg={toast} />
+      <Lightbox project={lb} index={lbIndex} setIndex={setLbIndex} onClose={() => setLb(null)} lang={lang} />
 
       <TweaksPanel>
         <TweakSection label="Wygląd" />
@@ -487,13 +518,11 @@ function App() {
             setTweak("accent", key);
           }}
         />
-        <TweakToggle
-          label="Siatka Swiss"
-          value={tw.gridTexture}
-          onChange={(v) => setTweak("gridTexture", v)}
-        />
+        <TweakToggle label="Etykiety kursora" value={tw.cursorWords} onChange={(v) => setTweak("cursorWords", v)} />
+        <TweakSection label="Portfolio / auto-sync" />
+        <TweakButton label={lang === "pl" ? "Symuluj wgranie projektu" : "Simulate upload"} onClick={() => simulate()} />
       </TweaksPanel>
-    </div>
+    </React.Fragment>
   );
 }
 
