@@ -1,0 +1,13 @@
+# Konfiguracja Netlify
+# Przy każdym push do GitHuba Netlify uruchamia build, który przebudowuje
+# portfolio/manifest.json (i generuje miniatury z nowych plików).
+
+[build]
+  command = "npm run build"
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Strona główna ("/") serwuje index.html automatycznie — to samodzielna,
+# samowystarczalna wersja strony (React/Babel/fonty wbudowane w plik).
